@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cream: #F7F4EC;
+  --color-cream-soft: #FBFAF6;
+  --color-paper: #FFFFFF;
+  --color-line: #E7E2D6;
+  --color-ink: #1C1B17;
+  --color-ink-soft: #6E6A5D;
+  --color-ink-faint: #A7A296;
+
+  --color-forest: #1F5C42;
+  --color-forest-deep: #163F2E;
+  --color-forest-soft: #E6EFE8;
+
+  --color-clay: #B4472B;
+  --color-clay-soft: #F7E7E1;
+
+  --color-gold: #C08A2E;
+  --color-gold-soft: #F6EDD9;
+
+  --color-slate: #3B5A7A;
+  --color-slate-soft: #E7EEF4;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-faint); }
+
+html.dark {
+  --color-cream: #14140F;
+  --color-cream-soft: #191912;
+  --color-paper: #1D1D16;
+  --color-line: #302F26;
+  --color-ink: #EDEBE3;
+  --color-ink-soft: #A9A697;
+  --color-ink-faint: #726F62;
+  --color-forest-soft: #16281F;
+  --color-clay-soft: #2B1C17;
+  --color-gold-soft: #2B2416;
+  --color-slate-soft: #182430;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation: fade-in-up 0.35s ease both;
+}
+
+button, a, input, select {
+  outline-color: var(--color-forest);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
