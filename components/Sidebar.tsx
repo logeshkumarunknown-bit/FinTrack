@@ -14,6 +14,7 @@ const groups: { title?: string; links: { href: string; label: string; match: str
     { href: "/assets", label: "Wealth", match: ["/assets", "/liabilities", "/snapshots", "/allocation"] },
     { href: "/transactions", label: "Money", match: ["/transactions", "/accounts", "/budget", "/insights", "/money-settings"] },
     { href: "/essentials", label: "Essentials", match: ["/essentials", "/goals"] },
+    { href: "/business", label: "Business", match: ["/business"] },
   ] },
   { title: "Tools", links: [
     { href: "/import", label: "Import", match: ["/import"] },

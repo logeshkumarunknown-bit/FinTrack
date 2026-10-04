@@ -118,3 +118,34 @@ export interface UserDoc {
   hiddenCategories?: string[];
   excluded?: string[];
 }
+
+export interface Business {
+  id: string;
+  name: string;
+  currency: string;
+  forecast: boolean;
+  daywise: boolean;
+  years: number[];
+  created_at: number;
+}
+
+export interface BizEntry {
+  id: string;
+  business_id: string;
+  type: "income" | "expense";
+  date: string; // YYYY-MM-DD (YYYY-MM-01 when day-wise is off)
+  amount: number;
+  category: string | null;
+  note: string | null;
+  created_at: number;
+}
+
+export interface BizLiability {
+  id: string;
+  business_id: string;
+  name: string;
+  amount: number;
+  paid: boolean;
+  due_date: string | null;
+  created_at: number;
+}
